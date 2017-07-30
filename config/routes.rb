@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :topics
+  resources :topics do
+    resources :comments
+    post :confirm, on: :collection
+  end
   root 'top#index'
 
     devise_for :users, controllers: {
