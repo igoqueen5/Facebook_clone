@@ -52,3 +52,8 @@ end
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'faker'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'carrierwave'
+gem 'mini_magick'

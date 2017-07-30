@@ -283,4 +283,3 @@ Devise.setup do |config|
     config.omniauth :twitter, ENV["TWITTER_ID_DEVELOPMENT"], ENV["TWITTER_SECRET_DEVELOPMENT"], scope: 'email', display: 'popup', info_fields: 'name, email'
   end
 end
-end
