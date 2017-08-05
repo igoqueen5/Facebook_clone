@@ -5,7 +5,7 @@ lock '3.6.0'
 set :application, 'facebook_clone'
 
 # cloneするgitのレポジトリ（xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
-set :repo_url, 'https://github.com/igoqueen5/Facebook_clone'
+set :repo_url, 'https://github.com/igoqueen5/Facebook_clone.git'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
 set :branch, ENV['BRANCH'] || 'master'
