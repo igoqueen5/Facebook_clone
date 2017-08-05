@@ -1,14 +1,26 @@
 
+10.times do |n|
+  name = Faker::HarryPotter.character
+  email = Faker::Internet.email
+  password = Faker::Internet.password
+  uid = SecureRandom.uuid
+  user = User.create(
+    name: name,
+    email: email,
+    password: password,
+    uid: uid
+  )
 
+  topic = Topic.new(
+    content: 'トピック',
+  user_id: user.id)
 
-20.times do |n|
-  topic = Faker::Name.content
-  Topic.create!(content: content,
-               )
-end
+  10.times do
+    topic.comments.build(
+      content: 'コメント',
+    user_id: user.id)
+  end
 
-20.times do |n|
-  comment = Faker ::Name.comment
-  Comment.create!(comment: comment,
-                 )
+  topic.save
+
 end
