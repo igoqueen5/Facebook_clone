@@ -7,7 +7,7 @@
         <%= link_to 'ユーザー詳細', user_path(user) %>
         <%= render 'follow_form', user: user %>
       </div>
-      </div>
+    </div>
 
 
   <% if user.id != current_user.id %>
@@ -18,5 +18,5 @@
     </div>
     <%= render partial: 'follow_form', locals: { user: user } if signed_in?   %>
   </li>
-<% end %>
+  <% end %>
 <% end %>
