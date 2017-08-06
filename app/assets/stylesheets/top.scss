@@ -37,7 +37,7 @@ header {
 @media (max-width: 767px) {
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #ccc;
-    text-align: center;
+    text-align: right;
     &:hover, &:focus {
       color: white;
     }
@@ -71,4 +71,12 @@ body {
 .flash {
   color: white;
   padding-top: 10px;
+}
+
+.main-header {
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+  background-image: image-url("header.jpeg");
+  background-attachment: fixed;
 }
