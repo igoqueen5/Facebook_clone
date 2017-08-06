@@ -48,9 +48,9 @@ end
 
 group :development do
   gem 'letter_opener_web'
-  gem 'dotenv-rails'
 end
 
+gem 'dotenv-rails'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'faker'
