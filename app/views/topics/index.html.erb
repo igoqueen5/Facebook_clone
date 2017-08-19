@@ -6,7 +6,7 @@
 <%= link_to "トピックを作成する", new_topic_path, class: 'btn btn-default' %>
 <% @topics.each do |topic| %>
 <div class="row">
-<h3><%= topic.user_id %></h3>
+<h3><%= topic.user.name %></h3>
 
   <%= link_to topic_path(topic) do %>
  <p>トピック:<%= topic.content %></p>
