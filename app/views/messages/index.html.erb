@@ -33,6 +33,7 @@
   <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
 <div>
   <%= f.submit "メッセージを送る" %>
+  <%= link_to "会話一覧に戻る", conversations_path %>
 </div>
 </div>
 </div>

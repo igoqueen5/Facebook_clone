@@ -27,10 +27,11 @@ end
 
   def create
     @message = @conversation.messages.build(message_params)
-  if @message.save
-    redirect_to conversation_messages_path(@conversation)
+    @message.save
+      redirect_to conversation_messages_path(@conversation)
   end
-  end
+
+
 
   private
   def message_params
