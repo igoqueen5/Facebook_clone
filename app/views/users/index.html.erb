@@ -1,4 +1,6 @@
-<h1>ユーザー一覧</h1>
+
+<h1>友達一覧</h1>
+
 <div class="container">
   <div class="row">
 
@@ -10,10 +12,6 @@
     <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post'%>
     <% if user.id != current_user.id %>
     <%= render partial: 'follow_form', locals: { user: user } if signed_in? %>
-
-
-
-
 <% end %>
 <% end %>
 </div>
