@@ -1,4 +1,4 @@
-<div class="center"><img src="topics.png" /></div>
+<div class="topic_index_img"><img src="topic.jpeg"></div>
 
 <div class="container">
   <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
@@ -12,12 +12,19 @@
 
 <%= link_to topic_path(topic) do %>
  <h3>Topic:</h3>
- <%= topic.content %>
+ <p><%= topic.content %></p>
+ <p><%= image_tag topic.photo_url %></p>
  <% end %>
 
 <% if topic.user.id == current_user.id %>
+<div class="button-location">
  <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success' %>
  <%= link_to "削除", topic_path(topic.id), method: :delete, data: {confirm:"本当に削除しますか？"}, class: 'btn btn-default btn-sm btn btn-danger' %>
+</div>
+
+ <div id="page-top-btn" class="page-top-btn">
+     <p><a class="move-page-top" id="move-page-top">▲</a></p>
+ </div>
 
 <% end %>
 </div>

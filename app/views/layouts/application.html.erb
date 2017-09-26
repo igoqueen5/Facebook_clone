@@ -22,6 +22,7 @@
      </button>
       <%= link_to "Facebook", root_path, class: "navbar-brand" %>
     </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -42,8 +43,18 @@
         </li>
     </div><!-- /.navbar-collapse -->
    </div><!-- /.container-fluid -->
-  </nav>
+</div>
+</nav>
 </header>
+
+<div class=search>
+<%= form_tag topics_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", class:'square_btn', :content => nil %>
+</p>
+<% end %>
+</div>
 
 <footer>
   <p>これはRuby on Rails 学習のために作られたサンプル用ページです</p>

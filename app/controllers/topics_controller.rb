@@ -3,12 +3,8 @@ class TopicsController < ApplicationController
   before_action :set_topic, only:[:show, :edit, :update, :destroy]
 
   def index
-    @topics = Topic.all
-    respond_to do |format|
-     format.html
-     format.js
+    @topics = Topic.search(params[:search])
   end
-end
 
   def new
     @topic = Topic.new
@@ -50,7 +46,7 @@ end
 
   private
   def topics_params
-    params.require(:topic).permit(:content)
+    params.require(:topic).permit(:content, :photo)
   end
 
   def set_topic

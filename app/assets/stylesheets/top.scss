@@ -78,4 +78,15 @@ body {
   background-size: cover;
   background-image: image-url("ny.jpeg");
   background-attachment: fixed;
+  height: 400px;
+}
+
+.square_btn {
+  display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
 }
